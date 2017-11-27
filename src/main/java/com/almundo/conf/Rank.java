@@ -6,19 +6,8 @@ package com.almundo.conf;
  */
 public enum Rank {
 
-    /**
-     *
-     */
     Operator(0),
-
-    /**
-     *
-     */
     Supervisor(1),
-
-    /**
-     *
-     */
     Director(2);
 
     private int value;
@@ -28,7 +17,7 @@ public enum Rank {
     }
 
     /**
-     *
+     * Retorna el valor del Rank
      * @return
      */
     public int getValue() {

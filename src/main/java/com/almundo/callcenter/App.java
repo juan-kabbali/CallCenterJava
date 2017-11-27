@@ -1,5 +1,6 @@
 package com.almundo.callcenter;
 
+import com.almundo.conf.CommonAssets;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -9,16 +10,17 @@ import java.util.concurrent.TimeUnit;
  */
 public class App {
 
-    public static final int INITIAL_DELAY = 0;
-    public static final int TIME_TO_NEW_CLIENT = 1;
     static Dispatcher dispatcher;
     static Runnable clientsCreator;
-
+    public static final int INITIAL_DELAY = 0;
+    public static final int TIME_TO_NEW_CLIENT = 1;
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        dispatcher = new Dispatcher();
+        // Inicializamos el dispatcher
+        dispatcher = CommonAssets.initDispatcher();
         initClientsCreater();
     }
 

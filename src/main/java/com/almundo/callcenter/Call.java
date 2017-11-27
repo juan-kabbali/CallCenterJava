@@ -1,5 +1,6 @@
 package com.almundo.callcenter;
 
+import com.almundo.conf.CommonAssets;
 import com.almundo.conf.Rank;
 import com.almundo.staff.Employee;
 import java.util.concurrent.ThreadLocalRandom;
@@ -9,10 +10,6 @@ import java.util.concurrent.ThreadLocalRandom;
  * asignarla al empleado de ese rank que este disponible para responderla
  */
 public class Call implements Runnable {
-
-    private final int MILISECONDS_TO_SECOONDS_CONVERTION = 1000;
-    private final int LOWER_CALL_LIMIT = 5;
-    private final int UPPER_CALL_LIMIT = 10;
 
     // Numero minimo del Rank del empleado que puede atender esta llamada
     private Rank rank;
@@ -29,7 +26,7 @@ public class Call implements Runnable {
 
     @Override
     public void run() {
-        int threadDuration = getCallDurationInSeconds(LOWER_CALL_LIMIT, UPPER_CALL_LIMIT);
+        int threadDuration = getCallDurationInSeconds(CommonAssets.LOWER_CALL_LIMIT_TIME_IN_SECONDS, CommonAssets.UPPER_CALL_LIMIT_TIME_IN_SECONDS);
         try {
             Thread.sleep(threadDuration);
             employee.callCompleted();
@@ -84,7 +81,7 @@ public class Call implements Runnable {
      */
     private int getCallDurationInSeconds(int min, int max) {
         int time = ThreadLocalRandom.current().nextInt(min, max + 1);
-        return time * MILISECONDS_TO_SECOONDS_CONVERTION;
+        return time * CommonAssets.MILISECONDS_TO_SECOONDS_CONVERTION;
     }
 
 }
