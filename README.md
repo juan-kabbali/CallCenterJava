@@ -44,6 +44,13 @@ $ git clone https://github.com/juan-kabbali/CallCenterJava.git
 $ mvn clean install
 ```
 
+Iniciar JUnits Tests
+-------------------
+```
+$ mvn test
+```
+
+
 
 
 
