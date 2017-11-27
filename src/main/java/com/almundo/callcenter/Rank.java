@@ -5,8 +5,20 @@ package com.almundo.callcenter;
  * la jerarquia del cargo de los empleados
  */
 public enum Rank {
+
+    /**
+     *
+     */
     Operator(0),
+
+    /**
+     *
+     */
     Supervisor(1),
+
+    /**
+     *
+     */
     Director(2);
 
     private int value;
@@ -15,6 +27,10 @@ public enum Rank {
         this.value = value;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getValue() {
         return this.value;
     }

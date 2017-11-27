@@ -18,6 +18,9 @@ public class Call implements Runnable {
     // Empleado que esta atentiendo la llamada 
     private Employee employee;
 
+    /**
+     * Constructor de llamada, se asigna el Rank de Operador por defecto
+     */
     public Call() {
         rank = Rank.Operator;
     }

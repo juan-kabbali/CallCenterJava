@@ -11,10 +11,6 @@ public class DispatcherTest {
 
     static final int TEST_10_CALLS = 10;
     
-    public DispatcherTest() {
-    }
-    
-    
     /**
      * Prueba unitaria con 10 llamadas
      */

@@ -11,10 +11,6 @@ public class NoAvailableEmployeesTest {
     
     static final int TEST_20_CALLS = 20;
         
-    public NoAvailableEmployeesTest() {
-        
-    }
-    
      /**
      * Prueba unitaria con 20 llamadas
      */

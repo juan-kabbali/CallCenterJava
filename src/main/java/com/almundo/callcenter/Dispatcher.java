@@ -17,6 +17,10 @@ public class Dispatcher {
     List<List<Employee>> employeesPerLevels;
     List<List<Call>> callQueuesPerLevels;
 
+    /**
+     * Constructor del Dispatcher, se inicializan las listas de empleados y 
+     * llamadas segund el Rank
+     */
     public Dispatcher() {
         employeesPerLevels = new ArrayList<List<Employee>>(LEVELS);
         callQueuesPerLevels = new ArrayList<List<Call>>(LEVELS);
