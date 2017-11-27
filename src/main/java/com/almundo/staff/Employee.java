@@ -1,4 +1,8 @@
-package com.almundo.callcenter;
+package com.almundo.staff;
+
+import com.almundo.callcenter.Call;
+import com.almundo.callcenter.Dispatcher;
+import com.almundo.conf.Rank;
 
 /**
  *
@@ -8,7 +12,7 @@ package com.almundo.callcenter;
  * en la capacidad de recibir llamadas, terminarlas, reconocer cuando esta libre
  * y reasigarse una llamada sin atender.
  */
-abstract class Employee {
+public abstract class Employee {
 
     private Call currentCall = null;
     protected Rank rank;
@@ -45,16 +49,8 @@ abstract class Employee {
         if (currentCall != null) {
             currentCall.end();
             currentCall = null;
-        }
-        // Si hay llamadas en espera, se asignan a un empleado
-        assignNewCall();
-    }
-
-    /**
-     * Si el empleado esta libre, le asigna una llamada que este encolada
-     */
-    public void assignNewCall() {
-        if (isFree()) {
+        }else{
+            //Si el empleado esta libre, le asigna una llamada que este encolada
             dispatcher.assignCall(this);
         }
     }

@@ -9,14 +9,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class App {
 
-    /**
-     *
-     */
     public static final int INITIAL_DELAY = 0;
-
-    /**
-     *
-     */
     public static final int TIME_TO_NEW_CLIENT = 1;
     static Dispatcher dispatcher;
     static Runnable clientsCreator;

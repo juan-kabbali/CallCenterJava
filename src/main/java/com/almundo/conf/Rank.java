@@ -1,4 +1,4 @@
-package com.almundo.callcenter;
+package com.almundo.conf;
 
 /**
  * @author Juan En este enum se definen los valores del Rank correspondientes a
